@@ -4,7 +4,7 @@ from kafka import KafkaProducer
 
 HOST='localhost:9092'
 TOPIC='my_topic'
-k_data = KafkaProducer(bootstrap_servers=HOST)
+k_data = KafkaProducer(bootstrap_servers=[HOST])
 producer = KafkaProducer(
     bootstrap_servers=[HOST],
     api_version=k_data.config['api_version'],
